@@ -20,3 +20,37 @@ var swiper = new Swiper(".mySwiper", {
     },
   }
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const parent = document.querySelector(".modal")
+  if (!parent) return false
+
+  const openModal = document.querySelector(".js-show-modal")
+  const closeModal = document.querySelector(".js-close-modal")
+
+  const open = () => {
+    parent.classList.add("active")
+    document.body.classList.add("active-body")
+  }
+  const close = () => {
+    parent.classList.remove("active")
+    document.body.classList.remove("active-body")
+  }
+
+  openModal.addEventListener("click", open)
+  closeModal.addEventListener("click", close)
+
+  parent.addEventListener('click', (event) => {
+    if(event.target === parent) {
+      close()
+    }
+  })
+
+  document.addEventListener('keydown', (event, keyCode) => {
+    if(event.keyCode === 27) {
+      close()
+    }
+  })
+
+})
