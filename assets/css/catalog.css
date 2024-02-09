@@ -29,6 +29,12 @@ a {
     color: inherit;
 }
 
+.container {
+    max-width: 1800px;
+    margin: 0 auto; 
+    padding: 0 24px;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -36,7 +42,7 @@ a {
     text-align: center;
     flex-wrap: wrap;
 
-    padding: 10px 30px;
+    padding: 10px 0 0 0;
 }
 
 .header-logo {
@@ -97,4 +103,33 @@ a {
 
 .header-search input::placeholder {
     color: #887569;
+}
+
+.catalog-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.catalog-header h2 {
+    font-size: 16px;
+    font-weight: 500;
+    color: #887569;
+}
+
+.catalog-header select {
+    background-color: transparent;
+    border: 1px solid #887569;
+    border-radius: 4px;
+    padding: 8px;
+    color: #887569;
+    outline: none;
+}
+
+.catalog-header option {
+    background-color: #fff;
+    border: transparent;
+    border-radius: 4px;
 }

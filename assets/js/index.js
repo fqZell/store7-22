@@ -54,3 +54,14 @@ document.addEventListener("DOMContentLoaded", () => {
   })
 
 })
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const actionMenu = document.querySelector('.fa-solid.fa-bars')
+  const menuEl = document.querySelector('.header-burger')
+
+  actionMenu.addEventListener('click', () => {
+    menuEl.classList.toggle('show')
+  })
+
+})

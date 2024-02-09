@@ -15,49 +15,71 @@
     <title>F*ckStore</title>
 </head>
 <body>
-    
-    <header>
 
-        <div class="header">
+    <div class="container">
+        <header>
 
-            <a href="../index.html"><div class="header-logo">F*ckstore</div></a>
+            <div class="header">
 
-            <ul class="header-links">
+                <a href="../index.html"><div class="header-logo">F*ckstore</div></a>
 
-                <a href="../pages/catalog.html"><li class="header-link">Новинки</li></a>
-                <a href="../pages/catalog.html"><li class="header-link">Женщинам</li></a>
-                <a href="../pages/catalog.html"><li class="header-link">Мужчинам</li></a>
-                <a href="../pages/catalog.html"><li class="header-link">Распродажа</li></a>
+                <ul class="header-links">
 
-            </ul>
+                    <a href="../pages/catalog.html"><li class="header-link">Новинки</li></a>
+                    <a href="../pages/catalog.html"><li class="header-link">Женщинам</li></a>
+                    <a href="../pages/catalog.html"><li class="header-link">Мужчинам</li></a>
+                    <a href="../pages/catalog.html"><li class="header-link">Распродажа</li></a>
 
-            <ul class="header-icons">
+                </ul>
 
-                <li class="header-search">
-                    <i class="fa-solid fa-magnifying-glass" style="color: #887569;"></i>
-                    <form>
-                        <label for="search"></label>
-                        <input type="text" id="search" placeholder="Поиск">
-                    </form>
-                </li>
+                <ul class="header-icons">
 
-                <li class="header-heart">
-                    <img src="../assets/img/icons/heartCatalog.svg" alt="heart">
-                </li>
-                <li class="header-account">
-                    <img src="../assets/img/icons/accountCatalog.svg" alt="account">
-                </li>
-                <li class="header-basket js-show-modal">
-                    <img src="../assets/img/icons/basketCatalog.svg" alt="basket">
-                </li>
+                    <li class="header-search">
+                        <i class="fa-solid fa-magnifying-glass" style="color: #887569;"></i>
+                        <form>
+                            <label for="search"></label>
+                            <input type="text" id="search" placeholder="Поиск">
+                        </form>
+                    </li>
 
-            </ul>
+                    <li class="header-heart">
+                        <img src="../assets/img/icons/heartCatalog.svg" alt="heart">
+                    </li>
+                    <li class="header-account">
+                        <img src="../assets/img/icons/accountCatalog.svg" alt="account">
+                    </li>
+                    <li class="header-basket js-show-modal">
+                        <img src="../assets/img/icons/basketCatalog.svg" alt="basket">
+                    </li>
 
-        </div>
+                </ul>
 
-    </header>
+            </div>
 
-    <hr>
+        </header>
+
+        <hr>
+
+        <main>
+
+            <div class="catalog-header">
+                <h2>Осенняя коллекция 2021</h2>
+
+
+                <select name="filtered">
+
+                    <option value="default">По умолчанию</option>
+
+                    <option value="price">По цене</option>
+                    <option value="relevance">По актуальности</option>
+                    <option value="name">По наименованию</option>
+
+                </select>
+
+            </div>
+
+        </main>
+    </div>
 
 </body>
 </html>
