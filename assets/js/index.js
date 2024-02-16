@@ -6,6 +6,12 @@ var swiper = new Swiper(".mySwiper", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
+    300: {
+      slidesPerView: 1,
+    },
+    350: {
+      slidesPerView: 1,
+    },
     400: {
       slidesPerView: 1,
     },
@@ -21,12 +27,12 @@ var swiper = new Swiper(".mySwiper", {
   }
 });
 
-document.addEventListener("DOMContentLoaded", () => {
+const modal = () => {
 
   const parent = document.querySelector(".modal")
   if (!parent) return false
 
-  const openModal = document.querySelector(".js-show-modal")
+  const openModals = document.querySelectorAll(".js-show-modal")
   const closeModal = document.querySelector(".js-close-modal")
 
   const open = () => {
@@ -38,7 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("active-body")
   }
 
-  openModal.addEventListener("click", open)
+  openModals.forEach(openModal => (
+    openModal.addEventListener("click", open)
+  ))
   closeModal.addEventListener("click", close)
 
   parent.addEventListener('click', (event) => {
@@ -53,15 +61,21 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   })
 
-})
+}
 
-document.addEventListener("DOMContentLoaded", () => {
-
+const burger = () => {
   const actionMenu = document.querySelector('.fa-solid.fa-bars')
+  if (!actionMenu) return false
   const menuEl = document.querySelector('.header-burger')
 
   actionMenu.addEventListener('click', () => {
     menuEl.classList.toggle('show')
   })
+}
 
-})
+const init = () => {
+  burger()
+  modal()
+}
+
+document.addEventListener("DOMContentLoaded", init)
